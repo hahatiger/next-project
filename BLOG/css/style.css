@@ -1,0 +1,144 @@
+body{
+	background-color: #fff;
+	counter-reset: section;
+}
+body::before{
+	content: "";
+	position: fixed;
+	width: 253px;
+	height: 600px;
+	background-image:url(http://coding.imweb.io/img/project/blog/bg.jpg );
+	bottom: 0;
+	right: 0;
+}
+
+
+.page-detail{
+	width: 650px;
+	margin-left:50px;
+	
+}
+
+.page-detail h1.page-tt{
+	font-size:36px;
+	line-height: 2em;
+	margin:30px 0;
+	color: #188eee;
+}
+
+.article h2{
+	font-size: 24px;
+	line-height: 2em;
+	margin: 20px 0;
+}
+.article h2::after{
+	content: " ";
+	display: block;
+	height:2px;
+	width: 650px;
+	background-image: linear-gradient(to right,#188eee 15%,#f5f5f5 15%, #f5f5f5 100%); 
+
+}
+.article ol li::before{
+	counter-increment: section;
+	content: "0"counter(section)"/";
+	font-family: monospace;
+	margin-right: 10px;
+	color: #999;
+}
+
+.article>p{
+	font-size: 16px;
+	line-height: 1.8em;
+	text-indent: 2em;
+	margin: 10px 0;
+}
+.article>img{
+	border:1px solid #f5f5f5;
+	padding:5px;
+	margin:10px;
+}
+
+.article p.ps{
+	color:#999;
+}
+
+.article p.ps a:hover{
+	color: #188eee;
+}
+
+
+/*评论区*/
+.section-comment{
+	margin-top:50px;
+	border-top:3px solid #188eee;
+	padding-top:30px;
+}
+
+.section-comment .f-textarea{
+	display: block;
+	width:100%;
+	border:1px solid #dbdbdb;
+	padding: 5px;
+	border-radius: 5px;
+}
+
+.section-comment .f-textarea:hover{
+	border-color:#ccc;
+	box-shadow: 0 0 5px rgba(0,0,0,.2);
+}
+
+.section-comment .f-btn{
+	display: block;
+	margin:10px 0 20px 0;
+	padding:5px;
+	border:0;
+	cursor: pointer;
+	border-radius: 6px;
+}
+
+.section-comment .f-btn:hover{
+	background-color: #147de2;
+	color: #fff;
+}
+
+.comment-list{
+	width:100%;
+}
+
+.comment-list .comment-item{
+	width:100%;
+	background-color: #f5f5f5;
+	font-size:12px;
+	padding: 5px;
+	margin-bottom: 10px;
+}
+
+
+.comment-list .comment-item:hover{
+	box-shadow: 0 0 5px rgba(0,0,0,.2);
+}
+.comment-list .comment-item .comment-bd p{
+	font-size:14px;
+}
+.comment-list .comment-item .item-time{
+ 	color:#666;
+ }
+.comment-list .comment-item .item-user{
+	padding: 5px;
+	margin-left: 10px; 
+}
+.comment-list .comment-item .comment-ft{
+	text-align: right;
+}
+.comment-list .comment-item .comment-ft span{
+	cursor: pointer;
+	margin: 0 5px;
+}
+
+.comment-list .comment-item .item-user:hover,
+.comment-list .comment-item .comment-ft span:hover{
+	color: #147de2;
+	cursor: pointer;
+}
+

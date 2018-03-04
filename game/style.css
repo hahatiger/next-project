@@ -1,0 +1,94 @@
+* { 
+  padding:0; 
+  margin: 0;
+}
+
+html,body{
+  height: 100%;
+  width:100%;
+}
+
+canvas {
+  display: block;
+}
+
+body{
+  /*background: #e7e7e7;*/
+  color: #fff;
+  font-family: Verdana,Arial, sans-serif;
+  font-size: 18px;
+}
+h1{
+	font-size: 30px;
+}
+
+a{
+	color: #fff;
+	text-decoration:none;
+}
+a:hover{
+	text-decoration: underline;
+}
+.button{
+  background: #185da8;
+  border-radius: 5px;
+  display: block;
+  font-size: 18px;
+  margin-top: 20px;
+  border: none;
+  padding: 10px;
+  width: 120px;
+  color: #fff;
+}
+.button:hover{
+	background: #2488f5;
+	color: #fff;
+	text-decoration: none;
+}
+#game{
+  width: 700px;
+  height: 600px;
+  position: relative;
+  left: 50%;
+  top: 40px;
+  margin: 0 0 0 -350px;
+  background: linear-gradient(-180deg, #040024 0%, #07165C 97%);
+}
+
+.game-panel {
+	width: 700px;
+	height: 600px;
+	position: absolute;/* 将UI置于画布之上 */
+}
+.game-ui{
+  display: none;
+  padding: 55px;
+  box-sizing: border-box;
+	height: 100%;
+}
+.game-level {
+  margin-top: 10px;
+  font-size: 18px;
+}
+.game-desc {
+  font-size: 14px;
+  margin-top: 10px;
+  width: 330px;
+}
+[data-status="start"] .game-intro {
+  display: block;
+  padding-top: 180px;
+  background: url(./img/bg.png) no-repeat 430px 180px;
+  background-size: 200px;
+}
+
+[data-status="failed"] .game-failed, 
+[data-status="success"] .game-success,
+[data-status="all-success"] .game-all-success {
+  display: block;
+  padding-top: 180px;
+  background: url(./img/bg-end.png) no-repeat 380px 190px;
+  background-size: 250px;
+}
+
+

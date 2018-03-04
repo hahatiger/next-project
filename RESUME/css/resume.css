@@ -1,0 +1,311 @@
+html,body{
+	font:14px Sans-serif; 
+	color: #fff;
+	width: 100%;
+	background-color: #f5f5f5;
+}
+
+.container{
+	overflow: hidden;
+	display: flex;
+	height:100vh;
+	justify-content: center;	
+}
+/*左侧内容*/
+.container-left{
+	flex:1;
+	background: #188eee url( http://coding.imweb.io/img/project/resume/bg.png) repeat;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/*padding: 150px 0 160px;  */
+	min-height: 100vh; 
+}
+.wrap-left{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-size: 14px;
+	width: 88%;
+}
+.wrap-left .my-img{
+	width: 180px;
+	height: 180px;
+	border-radius: 50%;
+	border:5px solid #a5d3f8;
+	background-color: #fff;
+	margin-bottom: 10px;
+}
+.wrap-left .my-img:hover{
+	animation: imgShadow .5s infinite;
+	cursor: pointer;
+}
+.wrap-left .info-header{
+	text-align: center;
+	margin-bottom: 25px;
+}
+.wrap-left .my-name{
+	font-size: 20px;
+}
+.wrap-left .my-name,
+.wrap-left .my-loving
+{
+	line-height: 2em;
+}
+.wrap-left .my-loving{
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	text-align: center;
+}
+.wrap-left .info-list{
+	margin-bottom: 15px;
+}
+.wrap-left .info-item {
+	margin-bottom: 10px ;
+}
+.wrap-left .info-item span{
+	vertical-align: middle;
+}
+.icon-phone,.icon-mail2,.icon-github{
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  padding: 8px 0 12px;
+  display: inline-block;
+  margin-right: 20px;
+  border: 2px solid #fff;
+  border-radius: 50%; 
+  text-align: center;
+  vertical-align: middle;
+}
+.wrap-left .info-ft{
+	border-radius:6px; 
+	box-shadow: 0 0 0 1px #0e6ab8,
+				0 0 0 2px #2b9eff;
+	padding: 10px 5px;
+	
+}
+.info-ft span{
+	display: inline-block;
+	width: 48%;
+	line-height: 2.5em;
+} 
+/*右侧内容*/
+.container-right{
+	flex:1;
+	display: flex;;
+	flex-direction: column;
+	justify-content: center;
+	margin-left:20px;
+	font-size: 14px;
+}
+.wrap-right{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding-top: 6px;
+}
+.my-intro{
+	color:#188eee;
+	text-align: center;
+}
+.my-intro span{
+	vertical-align: middle;
+	font-weight: bolder;
+	padding: 0 15px;
+}
+.my-intro::before,
+.my-intro::after{
+	content: " ";
+	display: inline-block;
+	height: 1px;
+	background-color: #ccc;
+	vertical-align: middle;
+	width: calc((100% - 110px)/2);
+}
+.wrap-list{
+	margin-top:20px;
+	position: relative;
+	
+}
+
+.wrap-list::before{
+	content: " ";
+	position: absolute;
+	width: 1px;
+	background-image: linear-gradient(to bottom,#ccc 0,#ccc 80%,#ccc 80%,#fff 100%);
+	height: 100%;
+	top:4%;
+}
+
+.work-item{
+	margin-left: 15px;
+	position: relative;
+}
+.work-item .circle{
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: #188eee;
+	box-shadow: 0 0 0px 5px #c9e0f4 ;
+	top:12px;
+	left:-20px;
+}
+.work-item:hover .circle{
+	animation: circleShadow .5s infinite;
+	
+}
+
+.item-hd,.work-info{
+	color: #333;
+}
+.work-item .work-content{
+	margin-top:10px;
+	margin-bottom: 15px;
+	color: #999;
+	line-height: 1.5em;
+
+}
+
+/*技能部分*/
+.skill-list{
+	font-size: 14px;
+	color: #999;
+	margin-top: 20px;
+}
+.skill-list .skill-hd{
+	display: flex;
+	color: #333;
+	padding-right: 15px;
+}
+.skill-list .skill-name{
+	flex:1;
+}
+.skill-list .skill-level{
+	height: 30px;	
+	border: 1px solid #ccc;
+	border-radius: 14px; 
+	text-align: center;
+	font-size: 14px;
+	color: #999;
+	padding:  0 10px;
+	
+}
+.skill-list .skill-info{
+	margin: 5px 0 15px;
+} 
+.skill-list .progress{
+	height: 4px;
+	background-color: #ccc;
+	margin: 5px 0;
+	border-radius: 2px; 
+	position: relative;
+}
+.skill-list .pro-ps,.skill-list .pro-css,.skill-list .pro-js{
+	position: absolute;
+	height: 4px;		
+	background-image: linear-gradient(to right,#117ad4,#10afed);
+	border-radius: 2px; 
+}
+.skill-list .pro-ps{
+	width: 20%;
+}
+.skill-list .pro-css{
+	width: 90%;
+}
+.skill-list .pro-js{
+	width: 50%;
+}
+
+.skill-item:hover .pro-ps{
+	animation: progressPs 1s;
+ }  
+.skill-item:hover .pro-css{
+	animation: progressCss 1s;
+}  
+.skill-item:hover .pro-js{
+	animation: progressJs 1s;
+}  
+
+/*一栏布局*/
+@media screen and (max-width: 768px){
+	.container{
+		display: flex;
+		flex-direction: column;
+		height: auto;
+		min-height: 100vh;
+	}
+	 .container-right{
+		margin-left: 0;
+	} 
+	.response-wrap{
+		margin-left: 20px;
+	}
+	.wrap-right{
+		padding-top: 0;
+		padding-bottom: 30px
+	}
+	.my-intro{
+		padding-top: 20px;
+	}
+}
+
+@keyframes imgShadow{
+	from {
+		border:5px solid #a5d3f8;
+		
+	}
+	to {
+		box-shadow: 0 0 5px 5px #a5d3f8;
+	}
+}
+
+@keyframes circleShadow{
+	from {
+		  box-shadow: 0 0 0px 5px #c9e0f4 ;
+	}
+	to {
+		box-shadow: 0 0 0px 2px #c9e0f4;
+	}
+}
+
+@keyframes progressPs{
+	from {
+		width: 0;	
+	}
+
+	to {
+		width: 20%;
+	}
+}
+@keyframes progressCss{
+	from {
+		width: 0;	
+	}
+
+	to {
+		width: 90%;
+	}
+	
+}
+@keyframes progressJs{
+	from {
+		width: 0;	
+	}
+
+	to {
+		width: 50%;
+	}
+}
+
+
+
+
+
+
+
+
+
