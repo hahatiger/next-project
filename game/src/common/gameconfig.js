@@ -10,7 +10,7 @@ export default {
   canvasPadding: 30, // 默认画布的间隔
   bulletSize: 10, // 默认子弹长度
   bulletSpeed: 10, // 默认子弹的移动速度
-  enemySpeed: 10, // 默认敌人移动距离
+  enemySpeed: 4, // 默认敌人移动距离
   enemySize: 50, // 默认敌人的尺寸
   enemyGap: 10,  // 默认敌人之间的间距
   enemyIcon: require('../img/enemy.png').default, // 怪兽的图像
